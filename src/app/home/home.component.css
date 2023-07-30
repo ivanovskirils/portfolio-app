@@ -1,0 +1,36 @@
+.container {
+  background: #000;
+  color: #FFF;
+  font-size: 12px;
+  font-family: 'Ubuntu', Arial, serif;
+  text-align: center;
+  height: 100vh; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code {
+  height: 200px;
+  width: 200px;
+  background-color: #000;
+  margin-bottom: 20px;
+  /* Add your QR code styling here */
+}
+
+
+.tabs {
+  margin-top: 20px;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: gray;
+  margin: 0 5px;
+}
+
+.tabs a:hover {
+  color: white;
+}
+/* Custom styles for the read books list */

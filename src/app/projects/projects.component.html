@@ -1,0 +1,13 @@
+<div class="projects-section">
+    <h2 class="section-title">Projects</h2>
+  
+    <div class="projects-container">
+      <div class="project-card" *ngFor="let project of projectsData">
+        <h3 class="project-name">{{ project.name }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        <p class="project-technologies">Technologies Used: {{ project.technologies }}</p>
+        <a class="project-link" href="{{ project.githubLink }}" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+  

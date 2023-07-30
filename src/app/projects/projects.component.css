@@ -1,0 +1,102 @@
+/* projects.component.css */
+
+.projects-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .section-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Add a creative underline effect */
+  .section-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(45deg, #007bff, #00bcd4);
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Animate the underline on hover */
+  .section-title:hover::before {
+    transform: scaleX(1);
+  }
+  
+  /* Remove the dots at the end of the title */
+  .section-title::after {
+    content: none; /* Remove the content property */
+    /* Remove the box-shadow property */
+  }
+  
+  
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Center the cards horizontally */
+  }
+  
+  .project-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .project-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .project-technologies {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px; /* Make the button more rounded */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .project-link:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="decorative-element left-element"></div>
+    <div class="decorative-element right-element"></div>
+    <div class="header-content">
+      <h1 class="header-title">Kirils Ivanovs</h1>
+      <p class="header-subtitle">Software Developer</p>
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a routerLink="/projects" routerLinkActive="active">Projects</a>
+            <div class="underline-effect" [ngClass]="{'active': isTabActive('/projects')}"></div>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/about" routerLinkActive="active">About</a>
+            <div class="underline-effect" [ngClass]="{'active': isTabActive('/about')}"></div>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact" routerLinkActive="active">Contact</a>
+            <div class="underline-effect" [ngClass]="{'active': isTabActive('/contact')}"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
