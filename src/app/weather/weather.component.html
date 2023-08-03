@@ -1,0 +1,7 @@
+<div class="weather-forecast" *ngIf="showWeather">
+    <div class="forecast-item" *ngFor="let forecast of forecasts">
+      <p>Date: {{ forecast.date }}</p>
+      <p>Temperature: {{ forecast.day.avgtemp_c }}°C</p>
+      <!-- Add other weather data as needed -->
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.tabs {
+    margin-top: 20px;
+  }
+  
+  .tabs a {
+    text-decoration: none;
+    color: gray;
+    margin: 0 5px;
+  }
+  
+  .tabs a:hover {
+    color: white;
+  }

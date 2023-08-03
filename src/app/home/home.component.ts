@@ -1,28 +1,19 @@
-import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, ViewChild } from '@angular/core';
+import { WeatherComponent } from '../weather/weather.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  animations: [
-    trigger('fadeInOut', [
-      state('void', style({ opacity: 0 })),
-      transition(':enter, :leave', [animate(500)]), // Use a duration of your choice (milliseconds)
-    ]),
-  ],
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  readBooks = [
-    'Book Title 1',
-    'Book Title 2',
-    'Book Title 3',
-    // Add more book titles as needed
-  ];
+  showWeather: boolean = false;
 
-  showReadBooks = false;
+  // Use ViewChild to get a reference to the WeatherComponent
+  @ViewChild(WeatherComponent, { static: true }) weatherComponent!: WeatherComponent;
 
-  toggleReadBooks() {
-    this.showReadBooks = !this.showReadBooks;
+  // Call the toggleWeather() method of WeatherComponent
+  toggleWeather() {
+    this.weatherComponent.toggleWeather();
   }
 }

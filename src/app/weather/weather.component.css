@@ -1,0 +1,13 @@
+.weather-forecast {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .forecast-item {
+    flex: 1 0 100px;
+    margin: 29px 14px 15px 1px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
