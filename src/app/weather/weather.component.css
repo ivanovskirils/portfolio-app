@@ -1,34 +1,5 @@
 .weather-forecast {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the forecast items in the container */
-}
-
-.forecast-item {
-  flex: 0 0 calc(20% - 20px); /* Calculate the width for 5 items in one line */
-  margin: 10px; /* Add some margin between the forecast items */
-  padding: 5px; /* Reduce the padding to make elements smaller */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 10px; /* Adjust the font size to make elements smaller */
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .forecast-item {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust size for 3 items in one line for smaller screens */
-    margin: 5px; /* Adjust margin for smaller screens */
-    padding: 3px; /* Adjust padding for smaller screens */
-    font-size: 8px; /* Adjust font size for smaller screens */
-  }
-}
-
-/* Media query for larger screens */
-@media screen and (min-width: 1024px) {
-  .forecast-item {
-    flex: 0 0 calc(16.66% - 20px); /* Adjust size for 6 items in one line for larger screens */
-    margin: 10px; /* Adjust margin for larger screens */
-    padding: 7px; /* Adjust padding for larger screens */
-    font-size: 12px; /* Adjust font size for larger screens */
-  }
+  justify-content: center;
+  color: white;
 }

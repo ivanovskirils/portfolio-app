@@ -1,24 +1,35 @@
-import { Component, Input } from '@angular/core';
-import { WeatherService } from '../weather/weather.service'; // Import the WeatherService
+import { Component, Input, OnInit } from '@angular/core';
+import { WeatherService } from '../weather/weather.service';
 
+export interface WeatherData {
+  date: string;
+  temperature: number;
+  // Add other properties if available in the API response
+}
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.css']
 })
-export class WeatherComponent {
+export class WeatherComponent implements OnInit {
   @Input() showWeather: boolean = false;
-  forecasts: any[] = [];
+  weatherData: any = {};
 
-  constructor(private weatherService: WeatherService) {} // Inject the WeatherService
+  constructor(private weatherService: WeatherService) {}
 
-  toggleWeather() {
-    this.showWeather = !this.showWeather;
-    if (this.showWeather) {
-      // Fetch weather data from the service when showWeather is true
-      this.weatherService.getWeatherForecast('Riga').subscribe((data: any) => {
-        this.forecasts = data.forecast.forecastday;
-      });
-    }
+  ngOnInit() {
+    this.weatherService.getWeather('Riga').subscribe(
+      (data) => {
+        this.weatherData.name = data.location.name;
+        this.weatherData.country = data.location.country;
+        this.weatherData.date = data.location.localtime;
+        this.weatherData.temperature = data.current.temp_c;
+        this.weatherData.conditionText = data.current.condition.text;
+        this.weatherData.conditionIcon = data.current.condition.icon;
+      },
+      (error) => {
+        console.error('Failed to fetch weather data:', error);
+      }
+    );
   }
 }

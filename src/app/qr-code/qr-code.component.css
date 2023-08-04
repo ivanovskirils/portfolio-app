@@ -5,20 +5,18 @@
   margin-bottom: 20px;
 }
 
-/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .qr-code {
-    height: 100px; /* Adjust QR code size for smaller screens */
+    height: 100px; 
     width: 100px;
-    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    margin-bottom: 10px; 
   }
 }
 
-/* Media query for larger screens */
 @media screen and (min-width: 1024px) {
   .qr-code {
-    height: 250px; /* Adjust QR code size for larger screens */
+    height: 250px; 
     width: 250px;
-    margin-bottom: 30px; /* Adjust margin for larger screens */
+    margin-bottom: 30px; 
   }
 }

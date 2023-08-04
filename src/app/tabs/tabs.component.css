@@ -1,4 +1,8 @@
+/* Add the following styles to add the separation element "|" between the tabs */
 .tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -6,30 +10,35 @@
   text-decoration: none;
   color: gray;
   margin: 0 5px;
+  position: relative; 
 }
 
 .tabs a:hover {
   color: white;
 }
 
-/* Media query for smaller screens */
+.tabs a:not(:last-child)::after {
+  content: "|";
+  color: white;
+  margin-left: 5px;
+}
+
 @media screen and (max-width: 768px) {
   .tabs {
-    margin-top: 10px; /* Adjust margin for smaller screens */
+    margin-top: 10px; 
   }
 
   .tabs a {
-    margin: 0 2px; /* Adjust margin for smaller screens */
+    margin: 0 4px; 
   }
 }
 
-/* Media query for larger screens */
 @media screen and (min-width: 1024px) {
   .tabs {
-    margin-top: 30px; /* Adjust margin for larger screens */
+    margin-top: 30px; 
   }
 
   .tabs a {
-    margin: 0 10px; /* Adjust margin for larger screens */
+    margin: 0 4px; 
   }
 }

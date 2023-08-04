@@ -1,7 +1,15 @@
-<div class="weather-forecast" *ngIf="showWeather">
-    <div class="forecast-item" *ngFor="let forecast of forecasts">
-      <p>Date: {{ forecast.date }}</p>
-      <p>Temperature: {{ forecast.day.avgtemp_c }}°C</p>
-      <!-- Add other weather data as needed -->
-    </div>
+<div class="weather-forecast">
+  <div class="forecast-item">
+    City: {{weatherData?.name}}
+    <br>
+    Country: {{weatherData?.country}}
+    <br>
+    Last Update: {{ weatherData?.date }}
+    <br>
+    Temperature: {{ weatherData.temperature | number:'1.1-1' }}°C
+    <br>
+    Condition: {{weatherData?.conditionText}}
+    <br>
+    <img [src]="weatherData.conditionIcon" alt="Weather Icon" />
+  </div>
 </div>

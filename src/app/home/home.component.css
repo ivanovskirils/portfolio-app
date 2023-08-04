@@ -1,19 +1,45 @@
-.container {
-  background: #000;
-  color: #FFF;
-  font-size: 12px;
-  font-family: 'Ubuntu', Arial, serif;
-  text-align: center;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
   height: 100vh;
+  background-color: black;
+}
+
+.flex-column {
+  flex: 0 0 33.33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item {
+  flex: 1;
+  border: 1px solid black;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.weatherDiv {
+.qr-code {
+  height: 200px;
+  width: 200px;
+  background-color: #000;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.weatherDiv {
+  justify-content: flex-start; 
+  align-items: flex-start; 
   margin-top: 20px;
 }
 
@@ -24,27 +50,16 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin: 1% 0% 2% 0%;
+  margin-top: 10px; 
 }
 
-button:hover {
-  background-color: #0056b3;
-}
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .container {
-    font-size: 10px; /* Adjust font size for smaller screens */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
   }
 
-  .weatherDiv {
-    margin-top: 10px; /* Adjust margin for smaller screens */
-  }
-}
-
-/* Media query for larger screens */
-@media screen and (min-width: 1024px) {
-  .container {
-    font-size: 14px; /* Adjust font size for larger screens */
+  .flex-column {
+    flex: none;
   }
 }
