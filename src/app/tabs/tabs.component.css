@@ -1,13 +1,35 @@
 .tabs {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: gray;
+  margin: 0 5px;
+}
+
+.tabs a:hover {
+  color: white;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .tabs {
+    margin-top: 10px; /* Adjust margin for smaller screens */
   }
-  
+
   .tabs a {
-    text-decoration: none;
-    color: gray;
-    margin: 0 5px;
+    margin: 0 2px; /* Adjust margin for smaller screens */
   }
-  
-  .tabs a:hover {
-    color: white;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1024px) {
+  .tabs {
+    margin-top: 30px; /* Adjust margin for larger screens */
   }
+
+  .tabs a {
+    margin: 0 10px; /* Adjust margin for larger screens */
+  }
+}

@@ -1,6 +1,24 @@
 .qr-code {
-    height: 200px;
-    width: 200px;
-    background-color: #000;
-    margin-bottom: 20px;
+  height: 200px;
+  width: 200px;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .qr-code {
+    height: 100px; /* Adjust QR code size for smaller screens */
+    width: 100px;
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
   }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1024px) {
+  .qr-code {
+    height: 250px; /* Adjust QR code size for larger screens */
+    width: 250px;
+    margin-bottom: 30px; /* Adjust margin for larger screens */
+  }
+}
