@@ -8,13 +8,31 @@
   font-size: 16px; 
 }
 
+.button-wrapper {
+  margin-top: 3px;
+}
+
+.button-wrapper button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 7px 8px;
+  margin: 3% 0 4% 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background-color 0.3s ease;
+}
+
+.button-wrapper button:hover {
+  background-color: #0056b3;
+}
 
 @media screen and (max-width: 768px) {
   .forecast-item {
     font-size: 14px; 
   }
 }
-
 
 @media screen and (max-width: 480px) {
   .forecast-item {

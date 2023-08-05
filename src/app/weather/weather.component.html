@@ -1,15 +1,22 @@
 <div class="weather-forecast">
   <div class="forecast-item">
-    City: {{weatherData?.name}}
+    <div class="input-group">
+      <input [(ngModel)]="city" class="form-control" type="text" placeholder="Enter city name" (keyup.enter)="getWeatherData()">
+      <div class="button-wrapper">
+        <button (click)="getWeatherData()">Get Weather</button>
+      </div>
+    </div>
+    City: <span [innerHTML]="sanitizedCity"></span>
     <br>
-    Country: {{weatherData?.country}}
+    Country: <span [innerText]="weatherData?.country"></span>
     <br>
-    Last Update: {{ weatherData?.date }}
+    Last Update: <span [innerText]="weatherData?.date"></span>
     <br>
-    Temperature: {{ weatherData.temperature | number:'1.1-1' }}°C
+    Temperature: <span [innerText]="weatherData?.temperature | number:'1.1-1'"></span>°C
     <br>
-    Condition: {{weatherData?.conditionText}}
+    Condition: <span [innerText]="weatherData?.conditionText"></span>
     <br>
-    <img [src]="weatherData.conditionIcon" alt="Weather Icon" />
+    <img [src]="weatherData?.conditionIcon" alt="Weather Icon" />
   </div>
 </div>
+
