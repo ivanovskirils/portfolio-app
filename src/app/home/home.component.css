@@ -13,12 +13,19 @@
 
 .flex-item {
   flex: 1;
-  border: 1px solid black;
+  border: 1px solid white;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.flex-item-1 {
+  flex: 1;
+  border: 1px solid white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
 }
 
 .qr-code {
@@ -40,7 +47,7 @@
 .weatherDiv {
   justify-content: flex-start; 
   align-items: flex-start; 
-  margin-top: 20px;
+  margin: 10px 0 0 10px;
 }
 
 button {
