@@ -21,12 +21,24 @@
   align-items: center;
 }
 .flex-item-1 {
-  flex: 100%;
+  flex: 1;
   border: 1px solid black;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
 }
+
+.flex-item-9 {
+  flex: 1;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden; /* Hide any overflow content (e.g., the meme) */
+}
+
 
 .qr-code {
   height: 200px;
@@ -47,7 +59,7 @@
 .weatherDiv {
   justify-content: flex-start; 
   align-items: flex-start; 
-  margin: 10px 0 0 10px;
+  margin: 15px 0 0 15px;
 }
 
 
